@@ -29,9 +29,6 @@ export default {
   components: {
     CollapsibleHeader,
     CollapsibleNavigation
-  },
-  mounted () {
-    window.test = this
   }
 }
 </script>
