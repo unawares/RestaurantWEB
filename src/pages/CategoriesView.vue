@@ -45,7 +45,9 @@ export default {
   mounted () {
     axiosInstance.get('/api/food/categories/').then((response) => {
       for (let category of response.data) {
-        category.image = category.image.replace(/:8080/, ':8000')
+        if (category.image) {
+          category.image = category.image.replace(/:8080/, ':8000')
+        }
       }
       this.categories = response.data
     })

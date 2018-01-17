@@ -46,7 +46,9 @@ export default {
     axiosInstance.get('/api/food/filtered/' + slug + '/').then((response) => {
       for (let food of response.data) {
         for (let image of food.images) {
-          image.image = image.image.replace(/:8080/, ':8000')
+          if (image.image) {
+            image.image = image.image.replace(/:8080/, ':8000')
+          }
         }
       }
       this.foods = response.data

@@ -10,7 +10,7 @@
       <div class="text-container">
         <div class="text-view">
           <div>
-            <span class="text">{{ title }}</span>
+            <span class="text">{{ title.toUpperCase() }}</span>
           </div>
         </div>
       </div>

@@ -6,7 +6,8 @@
       </div>
     </div>
     <div class="media">
-      <img class="image" :src="'http://localhost:8000' + images[0].image">
+      <img v-if="images.length > 0 && images[0].image !== null" class="image" :src="'http://localhost:8000' + images[0].image">
+      <img v-else class="image" src="https://blog.stylingandroid.com/wp-content/themes/lontano-pro/images/no-image-slide.png">
     </div>
     <div class="overlay-color"></div>
     <div class="overlay-border"></div>
