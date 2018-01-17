@@ -128,7 +128,7 @@ export default {
         let yLength = 50 * yPercentage
         this.menuItem.style.transform = `rotateX(${xDegree}deg) rotateY(${yDegree}deg) translate(${xLength}px, ${yLength}px)`
         this.overlayColor.style.transform = `translate(${xLength}px, ${yLength}px)`
-        this.overlayBorder.style.transform = `translate(${-xLength}px, ${-yLength}px)`
+        this.overlayBorder.style.transform = `translate(${-xLength * 1.1}px, ${-yLength * 1.1}px)`
         this.overlayText.style.transform = `translate(${-xLength * 1.5}px, ${-yLength * 1.5}px)`
       }
     },
@@ -180,9 +180,10 @@ export default {
       height: 85%
       width: 85%
       border: white 8px solid
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
   .overlay-filter
-    background-color: black
-    opacity: 0.2
+    background-color: #585858
+    opacity: 0.1
   .overlay-text
     .text-container
       height: 100%
@@ -207,7 +208,6 @@ export default {
     .overlay-border
       > .border
         border-color: #daff25 !important
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
     .overlay-text
       .text
         color: #daff25 !important
